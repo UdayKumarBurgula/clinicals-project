@@ -137,3 +137,16 @@ Errors/Exception and solutions:
 4)  HHH100046: Could not obtain connection to query JDBC database metadata
 The database clinicaldb doesn't exist in PostgreSQL yet. You need to execute the SQL script to create it. Let me help you run the script:
 
+
+## Step 6: 
+update the appsettings.json
+spring.application.name=clinicalapi
+spring.datasource.url=jdbc:postgresql://localhost:5432/clinicals
+spring.datasource.username=test
+spring.datasource.password=test
+server.servlet.context-path=/patientservices
+
+## Step 7: Run the application
+Run the application using the main method in ClinicalsApiApplication.java. 
+You can use an IDE like VScode, IntelliJ or Eclipse to run the application.
+
