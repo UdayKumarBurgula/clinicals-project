@@ -1,6 +1,7 @@
 clinicals-project
 
-I am a java developer. I want to create a application that captures the patient and his clinical data. Suggest a good tech stack for rest apis and single page frontend.
+I am a java developer. I want to create a application that captures the patient and his clinical data. 
+Suggest a good tech stack for rest apis and single page frontend.
 
 How can i create a clinicalapi spring boot project while using postgres sql database to save patient and his clinical data.
 
@@ -48,6 +49,8 @@ new file> Patient.java
 Patient.java
 -------------
 patient jpa model class with first name, last name, and age.
+
+(OR)
 
 patient jpa model class with primary key id, first name, last name, and age.
 
