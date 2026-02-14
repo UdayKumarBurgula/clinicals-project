@@ -150,3 +150,7 @@ server.servlet.context-path=/patientservices
 Run the application using the main method in ClinicalsApiApplication.java. 
 You can use an IDE like VScode, IntelliJ or Eclipse to run the application.
 
+## Step 8: sample screenshots of postman to test the rest api
+1) Create a patient
+2) Get all patients
+3) Get all clinical data for a patient
