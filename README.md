@@ -154,3 +154,10 @@ You can use an IDE like VScode, IntelliJ or Eclipse to run the application.
 1) Create a patient
 2) Get all patients
 3) Get all clinical data for a patient
+
+## Step 9: 
+Generate getter and setter in Model.cs -> onetomany, manytoOne.
+@CreationTimestamp assign creationdatatime
+Method that recieve the patient id,  clinical data and saves it to the database, and return the saved clinical data.
+PatientRepository.getPatientById inside the ClinicalRepository
+

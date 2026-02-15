@@ -27,6 +27,14 @@ public class Patient {
     fetch = FetchType.EAGER, orphanRemoval = true)
     private List<ClinicalData> clinicalDataList = new ArrayList<>();
 
+    public List<ClinicalData> getClinicalDataList() {
+        return clinicalDataList;
+    }
+
+    public void setClinicalDataList(List<ClinicalData> clinicalDataList) {
+        this.clinicalDataList = clinicalDataList;
+    }
+
     public Patient() {
     }
 

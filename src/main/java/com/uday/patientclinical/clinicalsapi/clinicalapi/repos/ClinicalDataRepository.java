@@ -8,4 +8,6 @@ import com.uday.patientclinical.clinicalsapi.clinicalapi.models.ClinicalData;
 @Repository
 public interface ClinicalDataRepository extends JpaRepository<ClinicalData, Long> {
     // Custom query methods can be defined here if needed
+
+    
 }

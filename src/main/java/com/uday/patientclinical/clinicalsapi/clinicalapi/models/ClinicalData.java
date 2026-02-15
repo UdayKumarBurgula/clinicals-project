@@ -4,6 +4,8 @@ import jakarta.persistence.*;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import java.sql.Timestamp;
 
+import org.hibernate.annotations.CreationTimestamp;
+
 
 @Entity
 @Table(name = "clinicaldata")
@@ -19,6 +21,7 @@ public class ClinicalData {
     @Column(name = "component_value", nullable = false)
     private String componentValue;
 
+    @CreationTimestamp
     @Column(name = "measured_date_time", nullable = false)
     private Timestamp measuredDateTime;
 
@@ -29,6 +32,14 @@ public class ClinicalData {
     private Patient patient;
 
     // Getters and Setters
+
+    public Patient getPatient() {
+        return patient;
+    }
+
+    public void setPatient(Patient patient) {
+        this.patient = patient;
+    }
 
     public Long getId() {
         return id;
