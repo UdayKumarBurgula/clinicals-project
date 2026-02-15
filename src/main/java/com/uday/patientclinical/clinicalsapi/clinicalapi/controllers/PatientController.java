@@ -9,6 +9,9 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.Optional;
 
+import org.springframework.http.HttpStatus;
+import org.springframework.web.server.ResponseStatusException;
+
 @RestController
 @RequestMapping("/api/patients")
 public class PatientController {
@@ -21,10 +24,12 @@ public class PatientController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Patient> getPatientById(@PathVariable Long id) {
-        Optional<Patient> patient = patientRepository.findById(id);
-        return patient.map(ResponseEntity::ok)
-                .orElseGet(() -> ResponseEntity.notFound().build());
+    public Patient getPatientById(@PathVariable Long id) {
+        return patientRepository.findById(id)
+                .orElseThrow(() -> new ResponseStatusException(
+                        HttpStatus.NOT_FOUND,
+                        "Patient not found with id: " + id
+                ));
     }
 
     @PostMapping
